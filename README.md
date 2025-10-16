@@ -258,3 +258,4 @@ cd host && yarn build
 **🎉 Projeto criado com foco em produção, escalabilidade e melhores práticas!**
 
 Desenvolvido com ❤️ usando React 18, TypeScript 5.6, Webpack 5 e Module Federation.# poc-gt-mfe
+# poc-gt-mfe
