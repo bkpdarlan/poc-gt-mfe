@@ -1,0 +1,162 @@
+// Remote Page Styles
+.remotePage {
+  min-height: calc(100vh - 70px);
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 300;
+  }
+}
+
+.content {
+  padding: 3rem 0;
+  background: #f8f9fa;
+}
+
+.remoteContainer {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+  
+  p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+  }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.info {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  h3 {
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      border-left: 4px solid #667eea;
+      font-size: 1rem;
+      line-height: 1.6;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      strong {
+        color: #667eea;
+        font-weight: 600;
+      }
+      
+      &::before {
+        content: "✓ ";
+        color: #28a745;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .remotePage .container {
+    padding: 0 1rem;
+  }
+  
+  .header {
+    padding: 2rem 0;
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  .content {
+    padding: 2rem 0;
+  }
+  
+  .info {
+    padding: 1.5rem;
+    
+    h3 {
+      font-size: 1.25rem;
+    }
+    
+    ul li {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,179 @@
+// Home Page Styles
+.home {
+  min-height: calc(100vh - 70px);
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    margin: 0 0 2rem 0;
+    opacity: 0.9;
+    font-weight: 300;
+  }
+  
+  .description {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    p {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      
+      strong {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.25rem 0.5rem;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.features {
+  padding: 4rem 0;
+  background: #f8f9fa;
+  
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 3rem 0;
+    color: #333;
+  }
+  
+  .featureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  .featureCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      margin: 0 0 1rem 0;
+      color: #333;
+    }
+    
+    p {
+      margin: 0;
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+}
+
+.info {
+  padding: 4rem 0;
+  background: white;
+  
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+    color: #333;
+  }
+  
+  .steps {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    
+    li {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      border-left: 4px solid #667eea;
+      
+      code {
+        background: #e9ecef;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        color: #e83e8c;
+        font-weight: 600;
+      }
+      
+      strong {
+        color: #667eea;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .home .container {
+    padding: 0 1rem;
+  }
+  
+  .hero {
+    padding: 2rem 0;
+    
+    .description {
+      padding: 1.5rem;
+      
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  .features, .info {
+    padding: 2rem 0;
+    
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
